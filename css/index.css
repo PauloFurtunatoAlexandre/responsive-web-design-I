@@ -1,3 +1,239 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.main-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.container  {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;    
+}
+
+.column {
+    padding: 10px;
+    width: 100%;
+}
+
+nav.container {
+    margin-top: 6px;
+}
+
+a.nav-item {
+    color: #888;
+    text-decoration: none;
+    font-family: "Lato", sans-serif;
+    font-size: 0.9em;
+}
+
+.container-two-columns {
+    margin: 60px auto;
+}
+
+p, h1, h2, h3, h4, h5, h6, a, address {
+    font-family: 'Titillium Web', sans-serif;
+    line-height: 1.4em;
+}
+
+div.column h1 {
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 3em;
+    text-align: center;
+}
+
+div.column h2 {
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 1.6em;
+    margin-bottom: 20px;
+}
+
+div.column a.btn-header {
+    display: block;
+    margin: 40px auto;
+    color: #888;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid #888;
+    text-align: center;
+    width: 25%;
+
+}
+
+div.column a.btn-header:hover {
+    color: black;
+    background: #888;
+    transition: background-color 0.5s ease-in;
+}
+
+hr.divider-line {
+    border-bottom: 2px solid black;
+    width: 100%;
+}
+
+.img-middle-page {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.footer {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
 
+/* media queries */
+@media screen and (max-width: 800px) {
+    a.nav-item:last-child {
+        order: -1;
+        position: absolute;
+        top: 14px;
+    }
+
+    nav.container {
+        margin-top: 60px;
+    }
+
+    .container.container-two-columns.tablet-column {
+        flex-direction: column;
+    }
+
+    .container.container-two-columns.tablet-column .column > img {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    a.nav-item:last-child {
+        order: -1;
+        position: absolute;
+        top: 4px;
+    }
+
+    nav.container {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .container.container-two-columns.tablet-column {
+        margin-top: 40px;
+    }
+
+    .main-container .container a.nav-item {
+        font-size: 0.8em;
+        padding: 4px 0;
+        position: relative;
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-container .container a.nav-item:before {
+        content: "";
+        border-top: 1px solid black;
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+
+    .main-container .container a.nav-item:first-child:after {
+        border-bottom: 1px solid white;
+    }
+
+    .main-container .container a.nav-item:last-child:before {
+        border-top: 1px solid white;
+    }
+
+    .main-container .container a.nav-item:nth-child(6):after {
+        content: "";
+        border-bottom: 1px solid black;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    div.column h1 {
+        font-size: 2.6em;
+        line-height: 0.9em;
+    }
+
+    div.column a.btn-header {
+        font-size: 12px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .container-two-columns {
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 0.8em;
+    }
+
+    address {
+        font-size: 0.8em;
+    }
+
+    .footer {
+        margin-top: 40px;
+    }
+}
